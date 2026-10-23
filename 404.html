@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Acceso privado</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      box-sizing: border-box;
+      background: #161a4b;
+      color: #eef0fb;
+      font: 500 1rem/1.6 system-ui, sans-serif;
+    }
+    main { max-width: 34rem; }
+    h1 { margin: 0 0 8px; font-size: 1.5rem; line-height: 1.25; }
+    p { margin: 0; color: #a6abd4; }
+  </style>
+  <noscript><style>[data-estado="abriendo"] { display: none; }</style></noscript>
+  <script src="/cripto.js?v=b9cf85f19d" defer></script>
+  <script src="/entrada.js?v=5cd878df85" defer></script>
+</head>
+<body>
+  <main>
+    <section data-estado="abriendo"><h1>Abriendo…</h1></section>
+    <section data-estado="sin-clave" hidden>
+      <h1>Contenido privado</h1>
+      <p>Para verlo necesitas el enlace de acceso completo. Pídeselo a quien te lo ha compartido.</p>
+    </section>
+    <section data-estado="no-valida" hidden>
+      <h1>El enlace no es válido</h1>
+      <p>Puede que se haya copiado incompleto. Vuelve a abrirlo desde el mensaje original o pide uno nuevo.</p>
+    </section>
+    <section data-estado="caducado" hidden>
+      <h1>Tu acceso ha caducado</h1>
+      <p>Por seguridad, el acceso dura 24 horas. Vuelve a abrir el enlace que te enviaron.</p>
+    </section>
+    <section data-estado="cambiada" hidden>
+      <h1>Este acceso ya no es válido</h1>
+      <p>El enlace ha cambiado. Pide el enlace nuevo a quien te lo ha compartido.</p>
+    </section>
+    <section data-estado="sin-soporte" hidden>
+      <h1>Este navegador no puede abrir el contenido</h1>
+      <p>Ábrelo en Safari, Chrome, Edge o Firefox. Si lo has abierto desde una app, usa «Abrir en el navegador»; si estás en una ventana privada, prueba en una normal.</p>
+    </section>
+    <section data-estado="error" hidden>
+      <h1>No se ha podido abrir</h1>
+      <p>Comprueba la conexión y vuelve a cargar la página.</p>
+    </section>
+    <noscript><h1>Contenido privado</h1><p>Activa JavaScript para verlo.</p></noscript>
+  </main>
+</body>
+</html>
